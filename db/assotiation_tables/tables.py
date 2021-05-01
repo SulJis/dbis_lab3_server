@@ -1,10 +1,11 @@
-from sqlalchemy import Table, Column, String, Integer, ForeignKey
-from server.constants import base
+# from sqlalchemy import Table, Column, String, Integer, ForeignKey
+# from server.constants import base
+from server import db
 
-user_list = Table("User_List", base.metadata,
-                  Column("user_id", Integer, ForeignKey("User.id")),
-                  Column("list_id", Integer, ForeignKey("List.id")))
+user_list = db.Table("User_List", db.metadata,
+                     db.Column("user_id", db.Integer, db.ForeignKey("User.id")),
+                     db.Column("list_id", db.Integer, db.ForeignKey("List.id")))
 
-list_label = Table("List_Label", base.metadata,
-                   Column("list_id", Integer, ForeignKey("List.id")),
-                   Column("label_text", String, ForeignKey("Label.text")))
+list_label = db.Table("List_Label", db.metadata,
+                      db.Column("list_id", db.Integer, db.ForeignKey("List.id")),
+                      db.Column("label_text", db.String, db.ForeignKey("Label.text")))

@@ -1,14 +1,12 @@
-from server.constants import base
-from sqlalchemy import Column, String, Integer, Sequence
-from sqlalchemy.orm import relationship
+from server import db
 from db.assotiation_tables.tables import list_label
 
 
-class Label(base):
+class Label(db.Model):
     __tablename__ = "Label"
-    text = Column(String, primary_key=True)
-    color = Column(String)
-    lists = relationship("List", secondary=list_label, back_populates="labels")
+    text = db.Column(db.String, primary_key=True)
+    color = db.Column(db.String)
+    lists = db.relationship("List", secondary=list_label, back_populates="labels")
 
     def to_dict(self):
         return {

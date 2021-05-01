@@ -1,17 +1,15 @@
-from server.constants import base
-from sqlalchemy import Column, String, Integer, Sequence, Boolean
-from sqlalchemy.orm import relationship
-from db.assotiation_tables.tables import user_list, list_label
+from server import db
+from db.assotiation_tables.tables import list_label, user_list
 
 
-class List(base):
+class List(db.Model):
     __tablename__ = "List"
-    list_id_seq = Sequence("list_id_seq")
-    id = Column(Integer, list_id_seq, primary_key=True, server_default=list_id_seq.next_value())
-    title = Column(String)
-    users = relationship("User", secondary=user_list, back_populates="lists")
-    labels = relationship("Label", secondary=list_label, back_populates="lists")
-    notes = relationship("Note")
+    list_id_seq = db.Sequence("list_id_seq")
+    id = db.Column(db.Integer, list_id_seq, primary_key=True, server_default=list_id_seq.next_value())
+    title = db.Column(db.String)
+    users = db.relationship("User", secondary=user_list, back_populates="lists")
+    labels = db.relationship("Label", secondary=list_label, back_populates="lists")
+    notes = db.relationship("Note")
 
     def to_dict(self):
         data = {
