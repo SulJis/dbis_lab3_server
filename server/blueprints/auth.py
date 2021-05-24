@@ -1,3 +1,5 @@
+from flask import jsonify
+
 from server.blueprints.bp_imports import *
 
 auth = Blueprint("auth", __name__)
@@ -38,6 +40,10 @@ def signup():
     return {"status": "signed up"}
 
 
-@auth.route("/logout")
+@auth.route("/logout", methods=["POST"])
 def logout():
-    return "logout"
+    data = jsonify({
+        "logout": "success"
+    })
+    unset_jwt_cookies(data)
+    return data
