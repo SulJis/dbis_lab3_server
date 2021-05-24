@@ -8,4 +8,4 @@ user_list = db.Table("User_List", db.metadata,
 
 list_label = db.Table("List_Label", db.metadata,
                       db.Column("list_id", db.Integer, db.ForeignKey("List.id")),
-                      db.Column("label_text", db.String, db.ForeignKey("Label.text")))
+                      db.Column("label_id", db.Integer, db.ForeignKey("Label.id")))
