@@ -47,7 +47,7 @@ python db/main.py
 ```
 Для запуску сервера необхідно виконати команду
 ```
-python server/__init__.py #for developing
+python server/__init__.py #for development
 gunicorn wsgi:app #for production
 ```
 Посилання на репозиторій клієнта (з інструкцією розгортання там же):https://github.com/SulJis/dbis_lab3_client
