@@ -28,4 +28,5 @@ dbis_lab3
 ```
 
 В якості доменної області для реалізації **CRUD** операцій було обрано менеджер планів та задач.
-![alt text](http://www.plantuml.com/plantuml/png/XP2nJiGm38PtFqLcH5_WffjOG8ZbvifjB2N2JL3YmY7eknDB5wBII2nj_F-_FySvPy4awy90GRnycakcz0LttfxCowCfXKU6OG1QqFF9l6EQ7IO8k52htZ3dZvZiw32x9ay-YHijIedg5p9Tcxj1dVdai_Hc5fEfsu0JyQ5ZBVzHfOSTXAxI67Fac7h8voXq8BBFyY_HqVnA9JF5o609BVjG5zxlEDPxLsuPTT_OHLU_OpJCHNUylPVkswKKkm_vxJRRzp0OFVtLj0Hejst9ewX707qviyMQkWLYPPqfs7NX7m00)
+
+![alt text](https://drive.google.com/file/d/1Un1JbdB6zBZg1PZ0fEDIHZIbMLWqBTCO/view?usp=sharing)
